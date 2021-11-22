@@ -13,9 +13,31 @@ Ex:
 #include <math.h>
 #include <string.h>
 
+
 void Ex4(char *str){
 	//Your codes here
-	
+	int n=strlen(str);
+	while (str[0] == ' '){
+		for(int i=0;i<=n;i++){
+			*(str+i)=*(str+i+1);
+		}
+		n--;
+	}
+	while (*(str+n-1) ==' '){
+		for(int i=n-1;i<=n-1;i++){
+			*(str+i)=*(str+i+1);
+		}
+		n--;
+    for(int i=0;i<n;i++){
+		if(*(str+i)==' ' && *(str+i+1)==' '){
+			for(int i=i+1;i<=n-1;i++){
+				*(str+i)=*(str+i+1);
+			}
+			n--;
+			i--;
+		}
+	}
+	}
 }
 
 int main(int argc, char *argv[]) {
